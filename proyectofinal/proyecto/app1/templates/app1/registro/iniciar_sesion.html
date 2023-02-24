@@ -1,0 +1,20 @@
+{% extends "app1/registro/padreRegistro.html"%}
+
+{% block iniciarSesion %} 
+    <!-- Masthead-->
+    <header class="masthead1">
+        <div class="container">
+            <h1 style="color:rgb(182, 173, 173);"> Iniciar Sesion</h1> 
+{% endblock %}
+
+{% block formulario %}
+    <form action="{% url 'iniciar_sesion' %}" method="POST"> {% csrf_token %}
+        
+        <table>
+        {{miFormulario.as_p}}
+        </table>  
+        
+        <input type = "submit" value="Iniciar sesion">
+        
+    </form>
+{% endblock %}

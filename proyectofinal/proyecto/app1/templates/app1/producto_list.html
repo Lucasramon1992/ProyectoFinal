@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <h1> <a  class="btn btn-primary" href="{% url 'inicio_superusuario' %}">Volver al inicio</h1></a>
+    <h1>Productos</h1>
+    {% for models_producto in object_list %}
+            
+        <h4>Nombre:{{models_producto.nombre}}</h4>
+        <p>precio:${{models_producto.precio}} C/U</p>
+        <a href="{% url 'Edit' models_producto.id %}">Editar</a>
+        <a href="{% url 'Delete' models_producto.id %}">Eliminar</a>
+        <h1>__________________________________________</h1>
+            
+    {% endfor %}
+
+    <a href="{% url 'crear_producto' %}">Nuevo producto</a>    
+</body>
+</html>

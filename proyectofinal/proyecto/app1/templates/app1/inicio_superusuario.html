@@ -1,0 +1,10 @@
+{% extends "app1/padre.html" %}
+
+{% block titulosuper %}
+<div class="masthead-heading text-uppercase"> Bienvenido super usuario! </div>
+{% endblock %}
+
+
+{% block listaSuperUsuario %}
+    <a class="btn btn-primary btn-xl text-uppercase" href="{% url 'List' %}">Editar lista de productos</a>
+{% endblock %}

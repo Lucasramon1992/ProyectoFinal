@@ -1,0 +1,20 @@
+{% extends "app1/registro/padreRegistro.html"%}
+
+{% block tituloregistrarse %} 
+    <!-- Masthead-->
+    <header class="masthead1">
+        <div class="container">
+            <h1 style="color:rgb(182, 173, 173);"> Registrarse </h1> 
+{% endblock %}
+
+{% block formulario %}
+    <form action="" method="POST"> {% csrf_token %}
+        
+        <table>
+        {{miFormulario.as_table}}
+        </table>  
+        
+        <input type = "submit" value="Registrarse">
+        
+    </form>
+{% endblock %}
